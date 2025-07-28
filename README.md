@@ -34,3 +34,4 @@ The lstm_no_value version (price-only) generally performs better and is simpler 
 
 Models are built using PyTorch and can be easily extended or adjusted.
 
+To test the models, use stock_simulator.ipynb and data from one of the assets (for example MOEX_short.txt ). The code selects a random point in time, loads the last few prices into the model, and gets the next price predicted by the model. Next, the program loads the last predicted price into the model and receives a new prediction. This continues until the predictions reach the desired length. Next, the program puts prices on the chart so that you can compare the prediction and reality.
